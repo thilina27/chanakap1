@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="date/jquery.datetimepicker.css"/>
+<style type="text/css">
+
+.custom-date-style {
+	background-color: red !important;
+}
+
+</style>
+</head>
+<body>
+	<h3>DatePicker</h3>
+	<input type="text" id="datetimepicker2"/><br><br>
+</body>
+<script src="date/jquery.js"></script>
+<script src="date/jquery.datetimepicker.js"></script>
+<script>/*
+window.onerror = function(errorMsg) {
+	$('#console').html($('#console').html()+'<br>'+errorMsg)
+}*/
+
+
+
+$('#datetimepicker2').datetimepicker({
+	
+	lang:'en',
+	timepicker:false,
+	format:'d/m/Y',
+	formatDate:'Y/m/d',
+	
+	 
+});
+
+
+
+
+</script>
+</html>
