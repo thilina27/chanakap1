@@ -38,29 +38,29 @@ if(! $retval)
 //set over role rank for each student 
 while ($row=mysql_fetch_assoc($retval)) {
   
-	$y1=rankValue($row['csc1122']);
-	$y2=rankValue($row['csc1113']);
-	$y3=rankValue($row['csc113a']);
-	$y4=rankValue($row['csc1142']);
-	$y5=rankValue($row['csc1153']);
-	$y6=rankValue($row['csc1213']);
-	$y7=rankValue($row['csc1223']);
-	$y8=rankValue($row['csc1233']);
-	$y9=rankValue($row['csc1242']);
-	$y10=rankValue($row['csc1251']);
-	$y11=rankValue($row['csc2113']);
-	$y12=rankValue($row['csc2123']);
-	$y13=rankValue($row['csc2133']);
-	$y14=rankValue($row['csc2143']);
-	$y15=rankValue($row['csc2213']);
-	$y16=rankValue($row['csc2233']);
-	$y17=rankValue($row['csc2242']);
-	$y18=rankValue($row['csc2252']);
-	$y19=rankValue($row['csc2263']);
-	$y20=rankValue($row['csc2222']);
-	$y21=rankValue($row['csc2272']);
-
-	$rank = $y1+$y2+$y3+$y4+$y5+$y6+$y7+$y8+$y9+$y10+$y11+$y12+$y13+$y14+$y15+$y16+$y17+$y18+$y19+$y20+$y21;
+	$rank=0;
+	$rank=$rank+rankValue($row['csc1122']);
+	$rank=$rank+rankValue($row['csc1113']);
+	$rank=$rank+rankValue($row['csc113a']);
+	$rank=$rank+rankValue($row['csc1142']);
+	$rank=$rank+rankValue($row['csc1153']);
+	$rank=$rank+rankValue($row['csc1213']);
+	$rank=$rank+rankValue($row['csc1223']);
+	$rank=$rank+rankValue($row['csc1233']);
+	$rank=$rank+rankValue($row['csc1242']);
+	$rank=$rank+rankValue($row['csc1251']);
+	$rank=$rank+rankValue($row['csc2113']);
+	$rank=$rank+rankValue($row['csc2123']);
+	$rank=$rank+rankValue($row['csc2133']);
+	$rank=$rank+rankValue($row['csc2143']);
+	$rank=$rank+rankValue($row['csc2213']);
+	$rank=$rank+rankValue($row['csc2233']);
+	$rank=$rank+rankValue($row['csc2242']);
+	$rank=$rank+rankValue($row['csc2252']);
+	$rank=$rank+rankValue($row['csc2263']);
+	$rank=$rank+rankValue($row['csc2222']);
+	$rank=$rank+rankValue($row['csc2272']);
+	
 	$stuId= $row['stuId'];
 	$query = mysql_query("INSERT INTO stu_rank_overall (stuId, rank_overall) VALUES('$stuId', $rank)");
 }
